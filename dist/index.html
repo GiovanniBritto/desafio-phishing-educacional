@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Laboratório local de conscientização sobre phishing. Demonstração com dados fictícios e análise de prevenção.">
+  <title>Phishing em foco | Laboratório educacional</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#laboratorio">Pular para a demonstração</a>
+  <header class="topbar">
+    <a class="brand" href="#inicio"><img src="/favicon.svg" width="36" height="36" alt=""><span>phishing<span class="brand-light"> em foco</span></span></a>
+    <span class="top-note">PROJETO DE ESTUDO <span aria-hidden="true">/</span> DESAFIO DIO</span>
+    <span class="local-tag"><span aria-hidden="true"></span> Laboratório local</span>
+  </header>
+  <main id="inicio">
+    <section class="hero" aria-labelledby="titulo">
+      <div class="hero-copy">
+        <p class="eyebrow">01 / ENGENHARIA SOCIAL</p>
+        <h1>Reconheça o risco<br>antes do <em>clique.</em></h1>
+        <p class="intro">Uma aparência familiar pode esconder um destino diferente. Explore o fluxo de uma página de treinamento e entenda por que verificar a origem faz diferença.</p>
+        <a class="text-link" href="#laboratorio">Explorar a demonstração <span aria-hidden="true">↘</span></a>
+      </div>
+      <aside class="hero-note" aria-label="Escopo do laboratório">
+        <span class="note-number" aria-hidden="true">↗</span>
+        <div><p class="eyebrow">APRENDER SEM EXPOR</p><h2>Dados fictícios.<br> Aprendizado real.</h2><p>A página usa um exemplo fixo. Nenhuma senha é solicitada, enviada ou armazenada.</p><span class="pill">Simulação independente do SET</span></div>
+      </aside>
+    </section>
+
+    <section id="laboratorio" class="lab-section" aria-labelledby="lab-title">
+      <div class="section-heading"><div><p class="eyebrow">OBSERVE O FLUXO</p><h2 id="lab-title">Da página ao servidor</h2></div><p>Um cenário controlado, passo a passo.</p></div>
+      <div class="lab-grid">
+        <article class="portal" aria-labelledby="portal-title">
+          <div class="portal-bar"><span class="mini-dots" aria-hidden="true">● ● ●</span><span>PÁGINA DE TREINAMENTO</span></div>
+          <div class="portal-body">
+            <div class="portal-mark" aria-hidden="true">P<span>↗</span></div>
+            <h3 id="portal-title">Portal de Treinamento</h3>
+            <p class="muted">Identidade fictícia para estudo de segurança.</p>
+            <div class="sample-data"><div><span>Usuário de exemplo</span><code>aluno@example.test</code></div><div><span>Senha de exemplo</span><code>SENHA_FICTICIA_123</code></div></div>
+            <p class="fixed-note">Valores ilustrativos e fixos. Não há campos de login.</p>
+            <button id="simulate" class="primary" type="button">Executar simulação <span aria-hidden="true">→</span></button>
+            <p id="status" class="status" role="status" aria-live="polite">Pronto para explorar o cenário.</p>
+          </div>
+          <div class="portal-footer"><span aria-hidden="true">◇</span> AMBIENTE DIDÁTICO · SEM AUTENTICAÇÃO</div>
+        </article>
+        <article class="flow" aria-labelledby="flow-title">
+          <div class="flow-heading"><h3 id="flow-title">O que acontece?</h3><span class="pill">3 etapas</span></div>
+          <ol class="steps">
+            <li class="step active" id="step-1"><span class="step-number">01</span><div><h4>Página de treinamento</h4><p>Você visualiza uma identidade fictícia, identificada como demonstração.</p></div></li>
+            <li class="step" id="step-2"><span class="step-number">02</span><div><h4>Evento local</h4><p>O botão envia apenas o identificador do cenário para o servidor desta máquina.</p><code class="request-label">POST /api/simulacao</code></div></li>
+            <li class="step" id="step-3"><span class="step-number">03</span><div><h4>Resposta ilustrativa</h4><p>O servidor devolve o exemplo predefinido e não grava os dados.</p></div></li>
+          </ol>
+          <div class="response-box"><div class="response-top"><span>RESPOSTA DO SERVIDOR</span><button id="reset" class="reset" type="button" hidden>Reiniciar</button></div><p id="placeholder" class="placeholder">Execute a simulação para ver a resposta.</p><pre id="result" tabindex="0" aria-label="Resposta JSON da simulação" hidden></pre></div>
+        </article>
+      </div>
+      <div class="insight"><span class="insight-icon" aria-hidden="true">!</span><p><strong>O aprendizado:</strong> uma interface parecida com um serviço conhecido não comprova sua origem. Em um ataque real, um formulário pode enviar dados a um destino controlado por terceiros.</p></div>
+      <noscript><p class="noscript">Ative JavaScript para executar a demonstração. O conteúdo educativo continua disponível abaixo.</p></noscript>
+    </section>
+
+    <section class="defense" aria-labelledby="defense-title"><div class="section-heading"><div><p class="eyebrow">LEVE PARA O DIA A DIA</p><h2 id="defense-title">Três hábitos de proteção</h2></div></div><div class="defense-grid">
+      <article><span class="defense-index">01 / ORIGEM</span><h3>Confira o endereço</h3><p>Abra o serviço pelo aplicativo ou por um endereço que você já conhece. O cadeado HTTPS, sozinho, não comprova que o site é legítimo.</p></article>
+      <article><span class="defense-index">02 / ACESSO</span><h3>Fortaleça sua conta</h3><p>Use senhas únicas e um gerenciador. Ative autenticação multifator; prefira métodos resistentes a phishing quando disponíveis.</p></article>
+      <article><span class="defense-index">03 / RESPOSTA</span><h3>Pare e reporte</h3><p>Desconfie de urgência e pedidos inesperados de login. Confirme a solicitação por um canal conhecido e reporte a mensagem suspeita.</p></article>
+    </div></section>
+  </main>
+  <footer class="footer"><p>Desafio DIO · estudo independente de conscientização sobre phishing</p><p>Marca fictícia · dados de demonstração · execução local</p></footer>
+</body>
+</html>

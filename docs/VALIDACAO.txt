@@ -1,0 +1,70 @@
+TAP version 13
+# Subtest: servidor escuta somente em 127.0.0.1
+ok 1 - servidor escuta somente em 127.0.0.1
+  ---
+  duration_ms: 27.1129
+  type: 'test'
+  ...
+# Subtest: página e assets carregam com política restritiva
+ok 2 - página e assets carregam com política restritiva
+  ---
+  duration_ms: 87.2343
+  type: 'test'
+  ...
+# Subtest: evento permitido devolve apenas exemplo fixo, sem persistência
+ok 3 - evento permitido devolve apenas exemplo fixo, sem persistência
+  ---
+  duration_ms: 6.9967
+  type: 'test'
+  ...
+# Subtest: campos extras e valores arbitrários são rejeitados sem serem refletidos
+ok 4 - campos extras e valores arbitrários são rejeitados sem serem refletidos
+  ---
+  duration_ms: 71.6841
+  type: 'test'
+  ...
+# Subtest: origens externas e ausentes são bloqueadas
+ok 5 - origens externas e ausentes são bloqueadas
+  ---
+  duration_ms: 23.5323
+  type: 'test'
+  ...
+# Subtest: Host arbitrário é bloqueado
+ok 6 - Host arbitrário é bloqueado
+  ---
+  duration_ms: 5.9069
+  type: 'test'
+  ...
+# Subtest: arquivos privados, rotas desconhecidas e travessia não são servidos
+ok 7 - arquivos privados, rotas desconhecidas e travessia não são servidos
+  ---
+  duration_ms: 40.8999
+  type: 'test'
+  ...
+# Subtest: método incorreto, JSON inválido e formato incorreto são rejeitados
+ok 8 - método incorreto, JSON inválido e formato incorreto são rejeitados
+  ---
+  duration_ms: 46.1168
+  type: 'test'
+  ...
+# Subtest: corpo acima de 256 bytes é rejeitado
+ok 9 - corpo acima de 256 bytes é rejeitado
+  ---
+  duration_ms: 15.783
+  type: 'test'
+  ...
+# Subtest: HEAD mantém headers sem enviar o conteúdo da página
+ok 10 - HEAD mantém headers sem enviar o conteúdo da página
+  ---
+  duration_ms: 20.2058
+  type: 'test'
+  ...
+1..10
+# tests 10
+# suites 0
+# pass 10
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 471.8415

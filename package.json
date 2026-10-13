@@ -1,0 +1,13 @@
+{
+  "name": "desafio-phishing-educacional",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Laboratório local de conscientização sobre phishing com dados fictícios.",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test"
+  },
+  "license": "MIT"
+}
